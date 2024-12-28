@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta Tabela FIPE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Consulta Tabela FIPE</h1>
+        
+        <div class="form-group">
+            <label for="tipo">Tipo de Veículo</label>
+            <select id="tipo">
+                <option value="">Selecione...</option>
+                <option value="carros">Carros</option>
+                <option value="motos">Motos</option>
+                <option value="caminhoes">Caminhões</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="marca">Marca</label>
+            <select id="marca" disabled>
+                <option value="">Selecione o tipo primeiro...</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="modelo">Modelo</label>
+            <select id="modelo" disabled>
+                <option value="">Selecione a marca primeiro...</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="ano">Ano</label>
+            <select id="ano" disabled>
+                <option value="">Selecione o modelo primeiro...</option>
+            </select>
+        </div>
+
+        <button id="consultar" disabled>Consultar Preço</button>
+
+        <div class="loading">
+            <div class="spinner"></div> 
+            Carregando...
+        </div>
+        
+        <div class="error">
+            Ocorreu um erro na consulta. Tente novamente.
+        </div>
+
+        <div class="resultado">
+            <h2>Resultado da Consulta:</h2>
+            <div class="preco"></div>
+            <div id="detalhes"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
